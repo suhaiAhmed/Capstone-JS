@@ -13,12 +13,12 @@
 
 <body id="body">
 
-  <header class="header d-flex justify-content-between align-items-center position-relative z-1">
+  <header class="bg-white p-2 header d-flex justify-content-between align-items-center position-relative z-1">
     <div class="header-logo d-flex align-items-center">
-      <img src="./homePage/freshcart-logo.svg" alt="FreshCart Logo">
+      <img class="img-fluid" src="./homePage/freshcart-logo.svg" alt="FreshCart Logo">
     </div>
 
-    <div class="search-bar input-group d-none d-md-flex">
+    <div style="max-width: 600px;" class="rounded-1 search-bar input-group d-none d-md-flex flex-grow-1 ">
       <button class="border btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">All
         Categories</button>
       <ul class="dropdown-menu">
@@ -39,15 +39,17 @@
     </div>
 
     <div class="header-icons d-flex align-items-center  d-none d-md-flex">
-      <i class="bi bi-heart fs-2"></i>
+      <i id="Logo" class="bi bi-heart fs-2"></i>
 
       <div class="dropdown ">
         <a class="btn bg-transparent border-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i id="login-modal" class="bi bi-person fs-2"></i>
+          <i id="login-modal" class="ms-3 bi bi-person fs-2"></i>
         </a>
       </div>
-      <button id="btn-shop" class=" border-0 bg-transparent" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i class="bi bi-bag-heart fs-2"></i></button>
+      <button id="btn-shop" class="border-0 bg-transparent" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <i id="Logo" class="ms-3 bi bi-bag-heart fs-2"></i>
+      </button>
 
     </div>
 
@@ -55,9 +57,9 @@
 
 
 
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg bg-success p-2">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand fw-bold text-white" href="#">
         <i class="bi bi-list"></i> All Departments
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -65,22 +67,22 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Home
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item " href="#">Action</a></li>
+              <li><a class="dropdown-item"  href="#">Another action</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item " href="#">Something else here</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Shop
             </a>
             <ul class="dropdown-menu">
@@ -93,7 +95,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Stores
             </a>
             <ul class="dropdown-menu">
@@ -106,7 +108,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Megamenu
             </a>
             <ul class="dropdown-menu">
@@ -119,7 +121,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Pages
             </a>
             <ul class="dropdown-menu">
@@ -132,7 +134,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Account
             </a>
             <ul class="dropdown-menu">
@@ -145,10 +147,10 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Dashboard</a>
+            <a class="nav-link text-white" href="#">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Docs</a>
+            <a class="nav-link text-white" href="#">Docs</a>
           </li>
         </ul>
       </div>
@@ -162,7 +164,7 @@
       <div class="d-flex align-items-center">
         <img class="img-fluid" src="./homePage/about-icons-1.svg" alt="Promo Icon">
         <div class="promo-text ms-3">
-          <h1>Welcome to FreshCart</h1>
+          <h1 class="fs-3 fw-bold mb-3">Welcome to FreshCart</h1>
           <p>Download the app get free food & <span style="color: #28a745;">$30</span> off on your first order.</p>
         </div>
       </div>
@@ -811,8 +813,10 @@
   <!-- MOODAl SIGNUP -->
 
 
-  <div  id="signup-modal" style="z-index: 4; display: none; background-color: rgba(0, 0, 0, 0.5); position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;">
-    <div class="w-100 d-flex align-items-center justify-content-center position-absolute top-50 start-50 translate-middle">
+  <div id="signup-modal"
+    style="z-index: 4; display: none; background-color: rgba(0, 0, 0, 0.5); position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;">
+    <div
+      class="w-100 d-flex align-items-center justify-content-center position-absolute top-50 start-50 translate-middle">
       <div class="bg-white p-4 rounded-3 shadow-lg w-100" style="max-width: 27rem; position: relative;">
         <div class="d-flex justify-content-between mb-4">
           <h2 class="fs-4 fw-bold">Sign Up</h2>
@@ -833,13 +837,15 @@
             <label class="form-label text-secondary" for="password">Password</label>
             <input class="form-control" type="password" id="password" placeholder="Enter Password">
           </div>
-          <p class="text-muted small mb-4">By Signing up, you agree to our <a href="#" class="text-success">Terms of Service</a> & <a href="#" class="text-success">Privacy Policy</a></p>
+          <p class="text-muted small mb-4">By Signing up, you agree to our <a href="#" class="text-success">Terms of
+              Service</a> & <a href="#" class="text-success">Privacy Policy</a></p>
           <button type="submit" class="btn btn-success w-100">Sign Up</button>
         </form>
-        <p class="text-center text-secondary mt-3">Already have an account? <a href="#" class="text-success" id="go-to-login">Sign in</a></p>
+        <p class="text-center text-secondary mt-3">Already have an account? <a href="#" class="text-success"
+            id="go-to-login">Sign in</a></p>
       </div>
     </div>
-</div>
+  </div>
 
 
 
@@ -862,8 +868,10 @@
 
   <!-- LOGIN MODAL  -->
 
-  <div id="signin-modal" style="z-index: 4; display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.5);">
-    <div class="w-100 d-flex align-items-center justify-content-center position-absolute top-50 start-50 translate-middle">
+  <div id="signin-modal"
+    style="z-index: 4; display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.5);">
+    <div
+      class="w-100 d-flex align-items-center justify-content-center position-absolute top-50 start-50 translate-middle">
       <div class="bg-white p-4 rounded-3 shadow-lg w-100" style="max-width: 27rem; position: relative;">
         <div class="d-flex justify-content-between mb-4">
           <h2 class="fs-4 fw-bold">Sign In</h2>
@@ -889,10 +897,11 @@
           </div>
           <button type="submit" class="btn btn-success w-100">Sign In</button>
         </form>
-        <p class="text-center text-secondary mt-3">Don't have an account? <a href="#" class="text-success" id="go-back-signup">Sign up</a></p>
+        <p class="text-center text-secondary mt-3">Don't have an account? <a href="#" class="text-success"
+            id="go-back-signup">Sign up</a></p>
       </div>
     </div>
-</div>
+  </div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
