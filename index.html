@@ -4,16 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap Header Demo</title>
+  <title>Bootstrap Header</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body id="body">
 
-  <header class="header d-flex justify-content-between align-items-center">
+  <header class="header d-flex justify-content-between align-items-center position-relative z-1">
     <div class="header-logo d-flex align-items-center">
       <img src="./homePage/freshcart-logo.svg" alt="FreshCart Logo">
     </div>
@@ -40,11 +40,21 @@
 
     <div class="header-icons d-flex align-items-center  d-none d-md-flex">
       <i class="bi bi-heart fs-2"></i>
-      <i class="bi bi-person fs-2"></i>
-      <i class="bi bi-bag-heart fs-2"></i>
+
+      <div class="dropdown ">
+        <a class="btn bg-transparent border-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i id="login-modal" class="bi bi-person fs-2"></i>
+        </a>
+      </div>
+      <button id="btn-shop" class=" border-0 bg-transparent" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <i class="bi bi-bag-heart fs-2"></i></button>
+
     </div>
 
   </header>
+
+
+
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
@@ -219,135 +229,677 @@
 
 
       </div>
-  </div>
+    </div>
 
 
-  <div class="container">
+    <div class="container">
 
 
-    <h2 class="fw-bold">
-      Fruits & vegetables
-    </h2>
-    <p class="text-secondary">
-      eat fresh, stay healthy
-    </p>
-    <div class="row">
-      <div class="col-md-3 ">
-        <div class="card p-3">
-          <div>
-            <span class="badge bg-success">14%</span>
-          </div>
-          <img src="./homePage/product-img-16.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Golden Pineapple</h5>
-            <p class="card-text">Fruits & Vegetables</p>
-            <div class="d-flex justify-content-between">
-              <div class="rating">
-                <i class="text-warning bi bi-star-fill"></i>
-                <i class="text-warning bi bi-star-fill"></i>
-                <i class="text-warning bi bi-star-fill"></i>
-                <i class="text-warning bi bi-star-fill"></i>
-                <i class="text-warning bi bi-star-half"></i>
-                <span class="ms-1">4.5 (25)</span>
-              </div>
+      <h2 class="fw-bold mt-4">
+        Fruits & vegetables
+      </h2>
+      <p class="text-secondary">
+        eat fresh, stay healthy
+      </p>
+      <div class="row">
+        <div class="col-md-3 ">
+          <div class="card p-3">
+            <div>
+              <span class="badge bg-success">14%</span>
             </div>
-            <div class="d-flex justify-content-between mt-2">
-              <span class="price fw-bold">$24</span>
-              <button type="button" class="btn btn-success">Add</button>
+            <img src="./homePage/product-img-19.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Golden Pineapple</h5>
+              <p class="card-text">Fruits & Vegetables</p>
+              <div class="d-flex justify-content-between">
+                <div class="rating">
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-half"></i>
+                  <span class="ms-1">4.5 (25)</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <span class="price fw-bold">$24</span>
+                <button type="button" class="btn btn-success">Add</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-3 ">
-        <div class="card p-3">
-          <div>
-            <span class="badge bg-success">14%</span>
-          </div>
-          <img src="./homePage/product-img-16.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Golden Pineapple</h5>
-            <p class="card-text">Fruits & Vegetables</p>
-            <div class="d-flex justify-content-between">
-              <div class="rating">
-                <i class="text-warning bi bi-star-fill"></i>
-                <i class="text-warning bi bi-star-fill"></i>
-                <i class="text-warning bi bi-star-fill"></i>
-                <i class="text-warning bi bi-star-fill"></i>
-                <i class="text-warning bi bi-star-half"></i>
-                <span class="ms-1">4.5 (25)</span>
-              </div>
+        <div class="col-md-3 ">
+          <div class="card p-3">
+            <div>
+              <span class="badge bg-success">14%</span>
             </div>
-            <div class="d-flex justify-content-between mt-2">
-              <span class="price fw-bold">$24</span>
-              <button type="button" class="btn btn-success">Add</button>
+            <img src="./homePage/product-img-16.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Golden Pineapple</h5>
+              <p class="card-text">Fruits & Vegetables</p>
+              <div class="d-flex justify-content-between">
+                <div class="rating">
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-half"></i>
+                  <span class="ms-1">4.5 (25)</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <span class="price fw-bold">$24</span>
+                <button type="button" class="btn btn-success">Add</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-3 ">
-        <div class="card p-3">
-          <div>
-            <span class="badge bg-success">14%</span>
-          </div>
-          <img src="./homePage/product-img-16.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Golden Pineapple</h5>
-            <p class="card-text">Fruits & Vegetables</p>
-            <div class="d-flex justify-content-between">
-              <div class="rating">
-                <i class="text-warning bi bi-star-fill"></i>
-                <i class="text-warning bi bi-star-fill"></i>
-                <i class="text-warning bi bi-star-fill"></i>
-                <i class="text-warning bi bi-star-fill"></i>
-                <i class="text-warning bi bi-star-half"></i>
-                <span class="ms-1">4.5 (25)</span>
-              </div>
+        <div class="col-md-3 ">
+          <div class="card p-3">
+            <div>
+              <span class="badge bg-success">14%</span>
             </div>
-            <div class="d-flex justify-content-between mt-2">
-              <span class="price fw-bold">$24</span>
-              <button type="button" class="btn btn-success">Add</button>
+            <img src="./homePage/product-img-18.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Golden Pineapple</h5>
+              <p class="card-text">Fruits & Vegetables</p>
+              <div class="d-flex justify-content-between">
+                <div class="rating">
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-half"></i>
+                  <span class="ms-1">4.5 (25)</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <span class="price fw-bold">$24</span>
+                <button type="button" class="btn btn-success">Add</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      
-      <div class="col-md-3 ">
-        <div class="card p-3">
-          <div>
-            <span class="badge bg-success">14%</span>
-          </div>
-          <img src="./homePage/product-img-16.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Golden Pineapple</h5>
-            <p class="card-text">Fruits & Vegetables</p>
-            <div class="d-flex justify-content-between">
-              <div class="rating">
-                <i class="text-warning bi bi-star-fill"></i>
-                <i class="text-warning bi bi-star-fill"></i>
-                <i class="text-warning bi bi-star-fill"></i>
-                <i class="text-warning bi bi-star-fill"></i>
-                <i class="text-warning bi bi-star-half"></i>
-                <span class="ms-1">4.5 (25)</span>
-              </div>
+
+        <div class="col-md-3 ">
+          <div class="card p-3">
+            <div>
+              <span class="badge bg-success">14%</span>
             </div>
-            <div class="d-flex justify-content-between mt-2">
-              <span class="price fw-bold">$24</span>
-              <button type="button" class="btn btn-success">Add</button>
+            <img src="./homePage/product-img-17.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Golden Pineapple</h5>
+              <p class="card-text">Fruits & Vegetables</p>
+              <div class="d-flex justify-content-between">
+                <div class="rating">
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-half"></i>
+                  <span class="ms-1">4.5 (25)</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <span class="price fw-bold">$24</span>
+                <button type="button" class="btn btn-success">Add</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
+
+
+    <div class="container">
+
+
+      <h2 class="fw-bold mt-4">
+        Breakfast & dairy
+      </h2>
+      <p class="text-secondary">
+        butter, cheese, milk, curd and more
+      </p>
+
+      <div class="row">
+        <div class="col-md-3 ">
+          <div class="card p-3">
+            <div>
+              <span class="badge bg-success">14%</span>
+            </div>
+            <img src="./homePage/product-img-7.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Golden Pineapple</h5>
+              <p class="card-text">Fruits & Vegetables</p>
+              <div class="d-flex justify-content-between">
+                <div class="rating">
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-half"></i>
+                  <span class="ms-1">4.5 (25)</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <span class="price fw-bold">$24</span>
+                <button type="button" class="btn btn-success">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 ">
+          <div class="card p-3">
+            <div>
+              <span class="badge bg-success">14%</span>
+            </div>
+            <img src="./homePage/product-img-8.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Golden Pineapple</h5>
+              <p class="card-text">Fruits & Vegetables</p>
+              <div class="d-flex justify-content-between">
+                <div class="rating">
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-half"></i>
+                  <span class="ms-1">4.5 (25)</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <span class="price fw-bold">$24</span>
+                <button type="button" class="btn btn-success">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 ">
+          <div class="card p-3">
+            <div>
+              <span class="badge bg-success">14%</span>
+            </div>
+            <img src="./homePage/product-img-9.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Golden Pineapple</h5>
+              <p class="card-text">Fruits & Vegetables</p>
+              <div class="d-flex justify-content-between">
+                <div class="rating">
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-half"></i>
+                  <span class="ms-1">4.5 (25)</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <span class="price fw-bold">$24</span>
+                <button type="button" class="btn btn-success">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 ">
+          <div class="card p-3">
+            <div>
+              <span class="badge bg-success">14%</span>
+            </div>
+            <img src="./homePage/product-img-10.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Golden Pineapple</h5>
+              <p class="card-text">Fruits & Vegetables</p>
+              <div class="d-flex justify-content-between">
+                <div class="rating">
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-half"></i>
+                  <span class="ms-1">4.5 (25)</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <span class="price fw-bold">$24</span>
+                <button type="button" class="btn btn-success">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+
+
+      <h2 class="fw-bold mt-4">
+        Biscuits, snacks & chocolates
+      </h2>
+      <p class="text-secondary">
+        discover a wide variety of munchies
+      </p>
+      <div class="row">
+        <div class="col-md-3 ">
+          <div class="card p-3">
+            <div>
+              <span class="badge bg-success">14%</span>
+            </div>
+            <img src="./homePage/product-img-1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Golden Pineapple</h5>
+              <p class="card-text">Fruits & Vegetables</p>
+              <div class="d-flex justify-content-between">
+                <div class="rating">
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-half"></i>
+                  <span class="ms-1">4.5 (25)</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <span class="price fw-bold">$24</span>
+                <button type="button" class="btn btn-success">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 ">
+          <div class="card p-3">
+            <div>
+              <span class="badge bg-success">14%</span>
+            </div>
+            <img src="./homePage/product-img-3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Golden Pineapple</h5>
+              <p class="card-text">Fruits & Vegetables</p>
+              <div class="d-flex justify-content-between">
+                <div class="rating">
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-half"></i>
+                  <span class="ms-1">4.5 (25)</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <span class="price fw-bold">$24</span>
+                <button type="button" class="btn btn-success">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 ">
+          <div class="card p-3">
+            <div>
+              <span class="badge bg-success">14%</span>
+            </div>
+            <img src="./homePage/product-img-8.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Golden Pineapple</h5>
+              <p class="card-text">Fruits & Vegetables</p>
+              <div class="d-flex justify-content-between">
+                <div class="rating">
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-half"></i>
+                  <span class="ms-1">4.5 (25)</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <span class="price fw-bold">$24</span>
+                <button type="button" class="btn btn-success">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 ">
+          <div class="card p-3">
+            <div>
+              <span class="badge bg-success">14%</span>
+            </div>
+            <img src="./homePage/product-img-5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Golden Pineapple</h5>
+              <p class="card-text">Fruits & Vegetables</p>
+              <div class="d-flex justify-content-between">
+                <div class="rating">
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-fill"></i>
+                  <i class="text-warning bi bi-star-half"></i>
+                  <span class="ms-1">4.5 (25)</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <span class="price fw-bold">$24</span>
+                <button type="button" class="btn btn-success">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row  d-flex justify-content-center">
+        <div class="col-md-6 d-flex justify-content-md-end justify-content-center">
+          <img src="./homePage/iphone-2.png" alt="">
+
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+
+          <h2 class="fw-bold">
+            Get the FreshCart app
+          </h2>
+          <p class="text-secondary">
+            We will send you a link, open it on your phone to download the app.
+          </p>
+          <div class="d-flex">
+            <div class="form-check me-2">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Email
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                Phone
+              </label>
+            </div>
+          </div>
+          <div class="d-flex align-items-center my-4 flex-wrap ">
+            <input type="text" class="mb-3 me-4 p-2 rounded-3 fw-bold" placeholder="Email....">
+            <button class="btn btn-success p-2">Share The App</button>
+
+          </div>
+          <p>
+            Download app from
+          </p>
+          <div>
+            <img class="mb-3 mb-md-0" src="./homePage/appstore-btn.svg" alt="">
+            <img src="./homePage/googleplay-btn.svg" alt="">
+          </div>
+
+        </div>
+        <hr class="my-5">
+      </div>
+
+    </div>
+
+    <div class="row my-5">
+      <div class="col-md-3 ">
+
+        <img class="mb-5" src="./homePage/clock.svg" alt="">
+        <h5 class="fw-bold">
+          10 minute grocery now
+        </h5>
+        <p class="text-secondary">
+          Get your order delivered to your doorstep at the earliest from FreshCart pickup stores near you.
+        </p>
+
+        <hr class="text-success d-block d-sm-none ">
+      </div>
+      <div class="col-md-3 ">
+
+        <img class="mb-5" src="./homePage/gift.svg" alt="">
+        <h5 class="fw-bold">
+          10 minute grocery now
+        </h5>
+        <p class="text-secondary">
+          Get your order delivered to your doorstep at the earliest from FreshCart pickup stores near you.
+        </p>
+
+        <hr class="text-success d-block d-sm-none ">
+      </div>
+      <div class="col-md-3 ">
+
+        <img class="mb-5" src="./homePage/package.svg" alt="">
+        <h5 class="fw-bold">
+          10 minute grocery now
+        </h5>
+        <p class="text-secondary">
+          Get your order delivered to your doorstep at the earliest from FreshCart pickup stores near you.
+        </p>
+
+        <hr class="text-success d-block d-sm-none ">
+      </div>
+      <div class="col-md-3 ">
+
+        <img class="mb-5" src="./homePage/refresh-cw.svg" alt="">
+        <h5 class="fw-bold">
+          10 minute grocery now
+        </h5>
+        <p class="text-secondary">
+          Get your order delivered to your doorstep at the earliest from FreshCart pickup stores near you.
+        </p>
+
+        <hr class="text-success d-block d-sm-none ">
+      </div>
+    </div>
 
 
   </main>
 
 
+
+
+
+
+
+  <footer class=" py-4 bg-light py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <h5 class="fw-bold mb-3">Categories</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">Vegetables &amp; Fruits</li>
+            <li class="mb-2">Breakfast &amp; Instant Food</li>
+            <li class="mb-2">Bakery &amp; Biscuits</li>
+            <li class="mb-2">Atta, Rice &amp; Dal</li>
+            <li class="mb-2">Sauces &amp; Spreads</li>
+            <li class="mb-2">Organic &amp; Gourmet</li>
+            <li class="mb-2">Baby Care</li>
+            <li class="mb-2">Cleaning Essentials</li>
+            <li class="mb-2">Personal Care</li>
+
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h5 class="fw-bold mb-3">Categories</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">Dairy, Bread &amp; Eggs</li>
+            <li class="mb-2">Cold Drinks &amp; Juices</li>
+            <li class="mb-2">Tea, Coffee &amp; Drinks</li>
+            <li class="mb-2">Masala, Oil &amp; More</li>
+            <li class="mb-2">Chicken, Meat &amp; Fish</li>
+            <li class="mb-2">Paan Corner</li>
+            <li class="mb-2">Pharma &amp; Wellness</li>
+            <li class="mb-2">Home &amp; Office</li>
+            <li class="mb-2">Pet Care</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h5 class="fw-bold mb-3">Get to Know Us</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">Company</li>
+            <li class="mb-2">About</li>
+            <li class="mb-2">Blog</li>
+            <li class="mb-2">Help Center</li>
+            <li class="mb-2">Our Value</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h5 class="fw-bold mb-3">For Consumers</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">Payments</li>
+            <li class="mb-2">Shipping</li>
+            <li class="mb-2">Product Returns</li>
+            <li class="mb-2">FAQ</li>
+            <li class="mb-2">Shop Checkout</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h5 class="fw-bold mb-3">Become a Shopper</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">Shopper Opportunities</li>
+            <li class="mb-2">Become a Shopper</li>
+            <li class="mb-2">Earnings</li>
+            <li class="mb-2">Ideas &amp; Guides</li>
+            <li class="mb-2">New Retailers</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h5 class="fw-bold mb-3">FreshCart Programs</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">FreshCart Programs</li>
+            <li class="mb-2">Gift Cards</li>
+            <li class="mb-2">Promos &amp; Coupons</li>
+            <li class="mb-2">FreshCart Ads</li>
+            <li class="mb-2">Careers</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row">
+        <div class="col-md-6 d-flex align-items-center">
+          <h6 class="font-weight-bold me-2">Payment Partners</h6>
+          <div class="d-flex align-items-center">
+            <img src="./homePage/amazonpay.svg" class="mr-2" />
+            <img src="./homePage/mastercard.svg" class="mr-2" />
+            <img src="./homePage/american-express.svg" class="mr-2" />
+            <img src="./homePage/paypal.svg" class="mr-2" />
+            <img src="./homePage/visa.svg" class="mr-2" />
+          </div>
+        </div>
+        <div class="col-md-6 text-md-right ">
+          <h6 class="fw-bold">Get Deliveries with FreshCart</h6>
+          <img alt="App Store badge" src="./homePage/appstore-btn.svg" class="mr-2" />
+          <img alt="Google Play badge" src="./homePage/googleplay-btn.svg" />
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="text-muted small">
+          © 2022 - 2024 FreshCart eCommerce HTML Template. All rights reserved. Powered by <span
+            class="text-success">Codescandy</span>.
+        </div>
+        <div>
+          <span class="font-weight-bold">Follow us on</span>
+          <a class="text-dark me-3" href="#"><i class="fab fa-facebook-f"></i></a>
+          <a class="text-dark  me-3" href="#"><i class="fab fa-twitter"></i></a>
+          <a class="text-dark  me-3" href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <!-- MOODAl SIGNUP -->
+
+
+  <div  id="signup-modal" style="z-index: 4; display: none; background-color: rgba(0, 0, 0, 0.5); position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;">
+    <div class="w-100 d-flex align-items-center justify-content-center position-absolute top-50 start-50 translate-middle">
+      <div class="bg-white p-4 rounded-3 shadow-lg w-100" style="max-width: 27rem; position: relative;">
+        <div class="d-flex justify-content-between mb-4">
+          <h2 class="fs-4 fw-bold">Sign Up</h2>
+          <button id="close-signup-modal" class="text-secondary border-0 bg-transparent p-0">
+            <i class="fs-3 bi bi-x"></i>
+          </button>
+        </div>
+        <form id="signup-form">
+          <div class="mb-3">
+            <label class="form-label text-secondary" for="name">Name</label>
+            <input class="form-control" type="text" id="name" placeholder="Enter Your Name">
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-secondary" for="email">Email address</label>
+            <input class="form-control" type="email" id="email" placeholder="Enter Email address">
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-secondary" for="password">Password</label>
+            <input class="form-control" type="password" id="password" placeholder="Enter Password">
+          </div>
+          <p class="text-muted small mb-4">By Signing up, you agree to our <a href="#" class="text-success">Terms of Service</a> & <a href="#" class="text-success">Privacy Policy</a></p>
+          <button type="submit" class="btn btn-success w-100">Sign Up</button>
+        </form>
+        <p class="text-center text-secondary mt-3">Already have an account? <a href="#" class="text-success" id="go-to-login">Sign in</a></p>
+      </div>
+    </div>
+</div>
+
+
+
+  <!-- Shooping cart  -->
+
+
+
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      ...
+    </div>
+  </div>
+
+
+
+  <!-- LOGIN MODAL  -->
+
+  <div id="signin-modal" style="z-index: 4; display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.5);">
+    <div class="w-100 d-flex align-items-center justify-content-center position-absolute top-50 start-50 translate-middle">
+      <div class="bg-white p-4 rounded-3 shadow-lg w-100" style="max-width: 27rem; position: relative;">
+        <div class="d-flex justify-content-between mb-4">
+          <h2 class="fs-4 fw-bold">Sign In</h2>
+          <button id="close-signin-modal" class="text-secondary border-0 bg-transparent p-0">
+            <i class="fs-3 bi bi-x"></i>
+          </button>
+        </div>
+        <form id="login-form">
+          <div class="mb-3">
+            <label class="form-label text-secondary" for="email-signin">Email address</label>
+            <input class="form-control" type="email" id="email-signin" placeholder="Enter Email address">
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-secondary" for="password-signin">Password</label>
+            <input class="form-control" type="password" id="password-signin" placeholder="Enter Password">
+          </div>
+          <div class="d-flex justify-content-between mb-4">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="remember-me">
+              <label class="form-check-label text-secondary" for="remember-me">Remember me</label>
+            </div>
+            <a href="#" class="text-success">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Sign In</button>
+        </form>
+        <p class="text-center text-secondary mt-3">Don't have an account? <a href="#" class="text-success" id="go-back-signup">Sign up</a></p>
+      </div>
+    </div>
+</div>
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
-    <script src="./home.js"></script>
+  <script src="./home.js"></script>
+  <script src="./login.js"></script>
 </body>
 
 </html>
