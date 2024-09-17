@@ -18,8 +18,13 @@ body {
     cursor: pointer;
 }
 
-
-
+.cart-item-2{
+    margin-bottom: 20px;
+    font-weight:bold;
+    border: 1px solid #0AAD0A;
+    background-color: aliceblue;
+    padding: 10px;
+}
 
 
 

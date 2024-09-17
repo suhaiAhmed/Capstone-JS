@@ -8,6 +8,7 @@ let goBackSignupLink = document.getElementById("go-back-signup");
 let form_data = document.getElementById("signup-form");
 let loginForm = document.getElementById("login-form");
 
+
 // Open the signup modal when login button is clicked
 
 loginModalBtn.addEventListener("click", () => {
@@ -20,7 +21,7 @@ closeSignupModal.addEventListener("click", () => {
     signupModal.style.display = "none";
 });
 
-// Open the signin modal when "Already have an account? Sign in" is clicked
+// Open the sign in modal when Already have an account Sign in is clicked
 
 goToLoginLink.addEventListener("click", (e) => {
     e.preventDefault();
@@ -82,6 +83,49 @@ loginForm.addEventListener("submit", (e) => {
 
 
     }
+});
+
+// Shopping cart function
+
+let cart = [];
+
+function addToCart(productName, price) {
+    const product = { name: productName, price: price };
+    cart.push(product);
+    displayCart();
+}
+
+function displayCart() {
+    const items = document.getElementById("list-items");
+    items.innerHTML = "";  // Clear existing items
+
+    if (cart.length === 0) {
+        const emptyMessage = document.createElement("li");
+        emptyMessage.textContent = "Your cart is empty.";
+        emptyMessage.style.color = "green";
+        items.appendChild(emptyMessage);
+    } else {
+        cart.forEach((item) => {
+            const listItem = document.createElement("li");
+            listItem.className = "cart-item-2";
+            listItem.textContent = `${item.name} - $${item.price}`;  // Display item with space
+            items.appendChild(listItem);
+        });
+    }
+}
+
+document.querySelectorAll(".add-cart-button").forEach(button => {
+    button.addEventListener("click", function() {
+
+        const card = button.closest('.card-body');
+        
+        const productName = card.querySelector('.card-title').textContent;
+        const priceText = card.querySelector('.price').textContent;
+        const price = parseFloat(priceText.replace('$', '').trim());
+
+        addToCart(productName, price);
+
+    });
 });
 
 
