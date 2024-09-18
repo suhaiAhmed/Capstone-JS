@@ -8,11 +8,6 @@ body {
 
 
 
-
-
-
-
-
 .location-btn,
 .header-icons i {
     cursor: pointer;
@@ -26,18 +21,18 @@ body {
     padding: 10px;
 }
 
+.remove-button {
+    
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+li {
+    list-style: none;
+    
+}
 
 
 
